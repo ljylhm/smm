@@ -1,0 +1,31 @@
+{
+  "name": "smmloadurl",
+  "version": "0.0.1",
+  "description": "load js dynamic",
+  "main": "./js/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev webpack-dev-server --mode development --config webpack.config.js",
+    "prod": "NODE_ENV=prod webpack --mode production --config webpack.config.js",
+    "test": "NODE_ENV=test node ./webpack.config.js"
+  },
+  "keywords": [
+    "load",
+    "dynamic"
+  ],
+  "author": "ljy",
+  "license": "ISC",
+  "dependencies": {
+    "@smm/http": "^1.0.4",
+    "@smm/result": "^1.0.13",
+    "cross-env": "^5.2.0",
+    "smmloadurl": "^0.0.1",
+    "ts-loader": "^6.0.4",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.35.3",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  }
+}

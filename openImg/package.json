@@ -1,0 +1,29 @@
+{
+    "name": "openimg",
+    "version": "0.0.1",
+    "description": "open img",
+    "main": "index.js",
+    "scripts": {
+      "test": "webpack-dev-server --mode development --config webpack.config.js",
+      "prod": "webpack --mode production --config webpack.config.js"
+    },
+    "keywords": [
+      "open",
+      "img",
+      "base64"
+    ],
+    "author": "ljy",
+    "license": "ISC",
+    "dependencies": {
+      "@smm/http": "^1.0.4",
+      "@smm/result": "^1.0.13",
+      "ts-loader": "^6.0.4",
+      "ts-node": "^8.3.0",
+      "typescript": "^3.5.3",
+      "webpack": "^4.35.3",
+      "webpack-bundle-analyzer": "^3.3.2",
+      "webpack-cli": "^3.3.5",
+      "webpack-dev-server": "^3.7.2"
+    }
+  }
+  

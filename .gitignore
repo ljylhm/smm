@@ -1,0 +1,7 @@
+# node_modules
+loadUrl/node_modules/
+openImg/node_modules/
+
+# dist
+loadUrl/js
+loadUrl/dist
