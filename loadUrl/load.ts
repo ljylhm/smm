@@ -1,14 +1,14 @@
-enum Type {
+export enum Type {
     normal = "normal", 
     async = "async",
     defer = "defer"
 }
 
 interface IOptions{
-    success:ICallback
-    error:ICallback
-    type:Type
-    isBefore:boolean
+    success?:ICallback
+    error?:ICallback
+    type?:Type
+    isBefore?:boolean
 }
 
 interface ICallback{

@@ -3303,12 +3303,30 @@ signal-exit@^3.0.0:
 
 smmloadurl@^0.0.1:
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/smmloadurl/-/smmloadurl-0.0.1.tgz#405b39b61bcfd3b81ea909f4b8a677fc84e354ee"
-  integrity sha512-9TQ+SHewHivVc0XpnDTFgnCjtozWll/LmKw8BC8RWcsRtBb7bSZvNQOPam9jxJRtYEuicVnnNjjtHh2JJpvPDQ==
+  resolved "http://npm.smm.cn/smmloadurl/-/smmloadurl-0.0.1.tgz#405b39b61bcfd3b81ea909f4b8a677fc84e354ee"
+  integrity sha1-QFs5thvP07geqQn0uKZ3/ITjVO4=
   dependencies:
     "@smm/http" "^1.0.4"
     "@smm/result" "^1.0.13"
     cross-env "^5.2.0"
+    ts-loader "^6.0.4"
+    ts-node "^8.3.0"
+    typescript "^3.5.3"
+    webpack "^4.35.3"
+    webpack-bundle-analyzer "^3.3.2"
+    webpack-cli "^3.3.5"
+    webpack-dev-server "^3.7.2"
+    webpack-merge "^4.2.1"
+
+smmloadurl@^0.0.3:
+  version "0.0.3"
+  resolved "http://npm.smm.cn/smmloadurl/-/smmloadurl-0.0.3.tgz#b4c7eeabf506eac458e545e1d4d11839409d0339"
+  integrity sha512-aX6E/O5RwI7IkNFHzHek4MT4GReSkqLyLZw020vZ4N426TpvdCnvIQ2sj3cZwHINjF29FvK3K9kupdlJyToQlg==
+  dependencies:
+    "@smm/http" "^1.0.4"
+    "@smm/result" "^1.0.13"
+    cross-env "^5.2.0"
+    smmloadurl "^0.0.1"
     ts-loader "^6.0.4"
     ts-node "^8.3.0"
     typescript "^3.5.3"

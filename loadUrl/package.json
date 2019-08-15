@@ -1,6 +1,6 @@
 {
   "name": "smmloadurl",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "load js dynamic",
   "main": "./js/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "@smm/http": "^1.0.4",
     "@smm/result": "^1.0.13",
     "cross-env": "^5.2.0",
-    "smmloadurl": "^0.0.1",
+    "smmloadurl": "^0.0.3",
     "ts-loader": "^6.0.4",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",

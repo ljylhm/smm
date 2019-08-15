@@ -33,7 +33,7 @@ module.exports = {
 
     devServer:{
         host: "testlocal.smm.cn",
-        port: "8005",
+        port: "8004",
         inline: true,
         open: true,
         compress: true, // 打包的内容进行压缩

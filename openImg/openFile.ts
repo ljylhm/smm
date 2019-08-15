@@ -11,9 +11,6 @@ interface IPicInfos{
     file:File
     base64Buffer:string
 }
-
-let count:number = 0
-
 export default class OpenFile {
     
     public limit:string = "image/*"     // 默认获取全部

@@ -1,59 +1,26 @@
-const path = require("path")
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const path = require("path");
+const merge  = require ("webpack-merge");
 
-const getCurrentIp = ()=> {
-    var interfaces = require('os').networkInterfaces();  
-    for(var devName in interfaces){  
-        var iface = interfaces[devName];  
-        for(var i=0;i<iface.length;i++){  
-            var alias = iface[i];  
-            if(alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal){  
-                    return alias.address;  
-            }  
-        }  
-    } 
+const ENV = process.env.NODE_ENV || "dev"
+
+const ENVLIST = {                                   // 环境变量对应执行的环境
+    "dev":"dev",
+    "prod":"prod",
+    "test":"prod"     
 }
 
-module.exports = {
-    entry:{
-        index:"./index.ts"
-    },
-
-    output:{
-        filename: "[name].js",
-        path: path.resolve(__dirname,"./dist"),
-    },
-
-    resolve:{
-        extensions: ['.js', '.json','.ts','.tsx']
-    },
-
-    module:{
-        rules: [{
-            test: /\.ts?$/,
-            loader: 'ts-loader',
-            exclude: /node_modules/
-        }]
-    },
-
-    devServer:{
-        host: getCurrentIp(),
-        port: "8003",
-        inline: true,
-        open: true,
-        compress: true, // 打包的内容进行压缩
-        hot: true,
-        proxy:{
-            // "/upload_img/**":{
-            //     target: 'https://testuser.smm.cn',
-            //     secure: false,
-            //     changeOrigin: true
-            // }
-        }
-    },
-
-    plugins:[
-        // new BundleAnalyzerPlugin()
-    ]
-
+const mapPath = {
+    "dev": path.resolve(__dirname,"./config/webpack.config.dev"),
+    "prod": path.resolve(__dirname,"./config/webpack.config.prod"),
+    "common": path.resolve(__dirname,"./config/webpack.config.base"),
 }
+
+let commonConfig = require(mapPath["common"])
+let currentConfig = require(mapPath[ENVLIST[ENV]])
+
+module.exports = merge.smart(commonConfig,currentConfig)
+
+
+
+
+
