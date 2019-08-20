@@ -123,9 +123,10 @@ class NECaptcha {
             _token = CAPTCHA_TOKEN
         }else{
             _token = await this.getNECaptchaID(device_type)
-            this.NECaptchaInfo.captchaId = _token
             CAPTCHA_TOKEN = _token
         }
+
+        this.NECaptchaInfo.captchaId = _token
  
         if(!_token){
             console.warn("并未获取到captcha")

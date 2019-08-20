@@ -1,6 +1,6 @@
 {
   "name": "smmloadurl",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "load js dynamic",
   "main": "./js/index.js",
   "scripts": {
